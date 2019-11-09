@@ -1,0 +1,23 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'styles/navbar/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/navbar/category_icon.css'%}">
+    <link rel="stylesheet" href="{% static 'styles/homepage/home-block.css'%}">
+
+
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+    {% block content %}
+
+    {% endblock %}
+ {% block content_2 %}
+
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,52 @@
+.block_main{
+    margin-left:2%;
+    margin-right:2%;
+    margin-top: 10%;
+    width:96%;
+    border-radius: 15px;
+}
+.block_main figcaption{
+    font-size: 18px;
+    font-weight: 600;
+    color:#3e3f68
+}
+.under_block{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 2%;
+    width:100%;
+}
+.under_block li a{
+    text-decoration: none;
+}
+.under_block li{
+    flex-grow: 1;
+}
+.plus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 5%;
+}
+.plus a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 30px;
+    color:#3e3f68;
+    background-color: #d3d6ef;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    vertical-align: middle;
+}
+.left{
+    flex-grow: 2;
+}
+.category-title{
+    margin-left: 20%;
+}
