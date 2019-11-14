@@ -6,12 +6,12 @@
     padding: 0;
 }
 .nav_layout img{
-    width: 50px
+    width: 75%;
 }
 .nav_layout li{
     width: 21%;
     margin: 2%;
-    height: 60px;
+    height: 60%;
     background-color: #d3d6ef;
     padding: 5px;
     text-align: center;
@@ -24,5 +24,5 @@
     margin: 0;
 }
 .nav_layout li figcaption{
-    margin-top: 20%;
+    margin-top: 10%;
 }
