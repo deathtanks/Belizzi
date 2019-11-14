@@ -47,6 +47,10 @@ INSTALLED_APPS = [
 
     #own apps
     'pages',
+    'Pizza',
+    'Burgers',
+    'Drinks',
+    'Desserts',
 
 ]
 
