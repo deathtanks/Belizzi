@@ -5,12 +5,12 @@ from .models import Pizza
 
 admin.site.register(Pizza)
 
-from .models import Burgers
+from .models import Burger
 
-admin.site.register(Burgers)
+admin.site.register(Burger)
 
-from .models import Desserts
-admin.site.register(Desserts)
+from .models import Dessert
+admin.site.register(Dessert)
 
-from .models import Drinks
-admin.site.register(Drinks)
+from .models import Drink
+admin.site.register(Drink)
