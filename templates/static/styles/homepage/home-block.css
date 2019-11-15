@@ -1,8 +1,5 @@
 .block_main{
-    margin-left:2%;
-    margin-right:2%;
-    margin-top: 10%;
-    width:96%;
+    width:100%;
     border-radius: 15px;
 }
 .block_main figcaption{
@@ -36,11 +33,11 @@
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    font-size: 30px;
-    color:#3e3f68;
-    background-color: #d3d6ef;
-    width: 45px;
-    height: 45px;
+    font-size: 70px;
+    color:#FEFDFC;
+    background-color: #8B83DA;
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
     vertical-align: middle;
 }
@@ -49,4 +46,8 @@
 }
 .category-title{
     margin-left: 20%;
+}
+.block{
+    background-color: lightsteelblue;
+    border-radius: 4%;
 }
