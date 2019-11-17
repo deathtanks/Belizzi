@@ -15,11 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pages import views
+from pages.views import homepage
+from Category.views import burger_view, dessert_view, drink_view, pizza_view
+
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', views.homepage, name='home'),
-    path('home/', views.homepage, name='home'),
+    path('', homepage, name='home'),
+    path('home/', homepage, name='home'),
+    path('burger/', burger_view, name='burger'),
+    path('dessert/', dessert_view, name='dessert'),
+    path('drink/', drink_view, name='drink'),
+    path('pizza/', pizza_view, name='pizza'),
     path('admin/', admin.site.urls),
 
-]
+
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

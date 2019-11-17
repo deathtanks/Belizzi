@@ -29,9 +29,12 @@ ALLOWED_HOSTS = []
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+
     'templates/static',
+    'templates/images',
     'templates/static/styles/homepage',
     'templates/static/styles/navbar',
+
 ]
 
 
@@ -47,10 +50,7 @@ INSTALLED_APPS = [
 
     #own apps
     'pages',
-    'Pizza',
-    'Burgers',
-    'Drinks',
-    'Desserts',
+    'Category',
 
 ]
 
@@ -133,3 +133,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

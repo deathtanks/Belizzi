@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for burger in burgers %}
+<img class="block_main"  src = /media/{{ burger.img }}  >
+
+    <ul class="under_block">
+        <li class="left"><h3>{{ burger.name }}</h3>
+            <p>$ {{ burger.price }} <span class="category-title">{{ burger.category }}</span></p>
+        </li>
+        <li class="plus">
+            <a href="#">+</a>
+        </li>
+    </ul>
+{% endfor %}
+{% endblock %}
+

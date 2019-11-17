@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% for drink in drinks %}
+<img class="block_main"  src = /media/{{ drink.img }}  >
+
+    <ul class="under_block">
+        <li class="left"><h3>{{ drink.name }}</h3>
+            <p>$ {{ drink.price }} <span class="category-title">{{ drink.category }}</span></p>
+        </li>
+        <li class="plus">
+            <a href="#">+</a>
+        </li>
+    </ul>
+{% endfor %}
+{% endblock %}
+
