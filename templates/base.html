@@ -2,15 +2,22 @@
 
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'styles/navbar/navbar.css' %}">
-    <link rel="stylesheet" href="{% static 'styles/navbar/category_icon.css'%}">
     <link rel="stylesheet" href="{% static 'styles/homepage/home-block.css'%}">
 
-
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
 </head>
 <body>
+<div class="row align-items-end">
+    <div class="col-2"></div>
+</div>
+<div class="row align-items-start">
+    <div class="col-2"></div>
+</div>
 
     {% include 'navbar.html' %}
 

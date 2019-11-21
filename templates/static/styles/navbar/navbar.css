@@ -1,28 +1,87 @@
-.nav_layout{
-    display:flex;
-    flex-direction: row;
-    list-style: none;
-    justify-content: center;
-    padding: 0;
+@font-face {
+    font-family: 'Josefin Sans Bold';
+    src: url('../fonts/JosefinSans-Bold.ttf');
+    src: url('../fonts/JosefinSans-Bold.ttf?iefix') format('truetype'),
+    url('../fonts/JosefinSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
 }
-.nav_layout img{
-    width: 75%;
+@font-face {
+    font-family: "Josefin Sans Regular";
+    src: url("../fonts/JosefinSans-Regular.ttf");
+    src: url("../fonts/JosefinSans-Regular.ttf?iefix") format('truetype'),
+    url("../fonts/JosefinSans-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
-.nav_layout li{
-    width: 21%;
-    margin: 2%;
-    height: 60%;
-    background-color: #d3d6ef;
-    padding: 5px;
-    text-align: center;
-    border-radius: 10px;
+
+
+.img {
+    height: 77px;
+    width: 77px;
+    border-radius: 22px;
 }
-.nav_layout li ol{
-    list-style: none;
+.gradient {
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    opacity: 0.65;
+    border-radius: 22px;
 }
-.nav_layout li figure{
-    margin: 0;
+#pizza_gradient {
+    background: rgba(255,86,114,1);
+    background: -moz-linear-gradient(top, rgba(255,86,114,1) 0%, rgba(255,139,72,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,86,114,1)), color-stop(100%, rgba(255,139,72,1)));
+    background: -webkit-linear-gradient(top, rgba(255,86,114,1) 0%, rgba(255,139,72,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,86,114,1) 0%, rgba(255,139,72,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,86,114,1) 0%, rgba(255,139,72,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,86,114,1) 0%, rgba(255,139,72,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5672', endColorstr='#ff8b48', GradientType=0 )
 }
-.nav_layout li figcaption{
-    margin-top: 10%;
+#burger_gradient {
+   background: #ff4665;
+background: -moz-linear-gradient(top, #ff4665 0%, #832bf6 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #ff4665), color-stop(100%, #832bf6));
+background: -webkit-linear-gradient(top, #ff4665 0%, #832bf6 100%);
+background: -o-linear-gradient(top, #ff4665 0%, #832bf6 100%);
+background: -ms-linear-gradient(top, #ff4665 0%, #832bf6 100%);
+background: linear-gradient(to bottom, #ff4665 0%, #832bf6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4665', endColorstr='#832bf6', GradientType=0 );
+}
+#desert_gradient {
+    background: #2dcff8;
+    background: -moz-linear-gradient(top, #2dcff8 0%, #3b41fe 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #2dcff8), color-stop(100%, #3b41fe));
+    background: -webkit-linear-gradient(top, #2dcff8 0%, #3b41fe 100%);
+    background: -o-linear-gradient(top, #2dcff8 0%, #3b41fe 100%);
+    background: -ms-linear-gradient(top, #2dcff8 0%, #3b41fe 100%);
+    background: linear-gradient(to bottom, #2dcff8 0%, #3b41fe 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2dcff8', endColorstr='#3b41fe', GradientType=0 );
+}
+#drink_gradient {
+    background: #009ec5;
+    background: -moz-linear-gradient(left, #009ec5 0%, #21e590 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, #009ec5), color-stop(100%, #21e590));
+    background: -webkit-linear-gradient(left, #009ec5 0%, #21e590 100%);
+    background: -o-linear-gradient(left, #009ec5 0%, #21e590 100%);
+    background: -ms-linear-gradient(left, #009ec5 0%, #21e590 100%);
+    background: linear-gradient(to right, #009ec5 0%, #21e590 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009ec5', endColorstr='#21e590', GradientType=1 );
+}
+.title{
+    position: absolute;
+    line-height: 77px;
+    color:white;
+    font-family: "Josefin Sans Bold";
+    font-size: 12px;
+}
+#desert_img {
+    transform: rotate(270deg);
+    z-index: -1;
+}
+#drinks_img {
+    z-index: -1;
+}
+#pizza_url {
+    cursor: pointer;
 }
