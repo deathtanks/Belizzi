@@ -6,26 +6,34 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{% static 'styles/navbar/navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/up_navbar/up_navbar.css' %}">
     <link rel="stylesheet" href="{% static 'styles/homepage/home-block.css'%}">
+    <link rel="stylesheet" href="{% static 'styles/footer/footer.css' %}">
 
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
 </head>
-<body>
-<div class="row align-items-end">
-    <div class="col-2"></div>
-</div>
-<div class="row align-items-start">
-    <div class="col-2"></div>
-</div>
-
+<header>
+    <div class="row align-items-end">
+        <div class="col-2"></div>
+    </div>
+    <div class="row align-items-start">
+        <div class="col-2"></div>
+    </div>
+    {% include 'up_navbar.html' %}
     {% include 'navbar.html' %}
+</header>
+
+<body>
 
 
     {% block content %}
 
     {% endblock %}
 
+<footer id="footer" class="footer navbar-fixed-bottom">
 
+    {% include 'footer.html' %}
+</footer>
 </body>
 </html>
