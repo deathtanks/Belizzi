@@ -1,7 +1,23 @@
-#up_navbar_cont {
-    height: 20px;
-}
-#category_folder_img {
+#category_img {
+    background-image: url("../up_navbar/up_navbar_img/category.png");
 
-    height: 20px;
+    height: 6vw;
+    width: 7vw;
+    background-size: cover;
+    float: left;
+
+}
+
+#category_title {
+    float: left;
+    height: 5vw;
+    font-size: 5vw;
+    padding-left: 0.5vw;
+    font-family: "Josefin Sans";
+    color: #3E3F68;
+}
+#category_see_all_list {
+    font-family: "Josefin Sans";
+    opacity:80% ;
+    float: right;
 }
