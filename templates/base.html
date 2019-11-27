@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'styles/up_navbar/up_navbar.css' %}">
     <link rel="stylesheet" href="{% static 'styles/homepage/home-block.css'%}">
     <link rel="stylesheet" href="{% static 'styles/footer/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/base/base.css' %}">
 
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
@@ -20,23 +21,19 @@
     <div class="row align-items-start">
         <div class="col-2"></div>
     </div>
+    Table {{ table }}
     {% include 'up_navbar.html' %}
     {% include 'navbar.html' %}
 </header>
 
 <body>
-
-
-    {% block content %}
-
-    {% endblock %}
-
-
-
-
+    <div class="container" id="space_for_items">
+{% block content %}
+{% endblock %}
+    </div>
+</body>
 <footer id="footer" class="footer fixed-bottom">
 
     {% include 'footer.html' %}
 </footer>
-</body>
 </html>
