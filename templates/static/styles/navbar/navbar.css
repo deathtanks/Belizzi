@@ -14,29 +14,75 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
-.img {
-    height: 77px;
-    width: 77px;
-    border-radius: 22px;
+.image {
+    z-index: -2;
+    background-size: cover;
+    border-radius: 20%;
+}
+.url {
+ border-radius: 20vw;
+}
+.col-3 {
+    width:77px;
+    height:77px ;
+}
+.title{
+    position: absolute;
+    line-height: 20vw;
+    color:white;
+    font-family: "Josefin Sans Bold";
+    font-size: 4vw;
+    z-index: 2;
 }
 .gradient {
+    z-index: 1;
+    height: 20vw;
+    width: 20vw;
     position: absolute;
-    width: 77px;
-    height: 77px;
     opacity: 0.65;
-    border-radius: 22px;
+    border-radius: 20%;
 }
+
+
+
+
+
+
+
+
+
+#pizza_img {
+    background-image: url("../navbar/navbar_img/pizza.png");
+    height: 20vw;
+    width: 20vw;
+}
+#burger_img {
+    background-image: url("../navbar/navbar_img/burger.png");
+    height: 20vw;
+    width: 20vw;
+}
+
+
+#drink_img {
+    background-image: url("../navbar/navbar_img/drink.png");
+    height: 20vw;
+    width: 20vw;
+}
+#desert_img {
+    background-image: url("../navbar/navbar_img/desert.png");
+    height: 20vw;
+    width: 20vw;
+}
+
 #pizza_gradient {
-    background: rgba(255,86,114,1);
-    background: -moz-linear-gradient(top, rgba(255,86,114,1) 0%, rgba(255,139,72,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,86,114,1)), color-stop(100%, rgba(255,139,72,1)));
-    background: -webkit-linear-gradient(top, rgba(255,86,114,1) 0%, rgba(255,139,72,1) 100%);
-    background: -o-linear-gradient(top, rgba(255,86,114,1) 0%, rgba(255,139,72,1) 100%);
-    background: -ms-linear-gradient(top, rgba(255,86,114,1) 0%, rgba(255,139,72,1) 100%);
-    background: linear-gradient(to bottom, rgba(255,86,114,1) 0%, rgba(255,139,72,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5672', endColorstr='#ff8b48', GradientType=0 )
+    background: rgba(255, 86, 114, 1);
+    background: -moz-linear-gradient(top, rgba(255, 86, 114, 1) 0%, rgba(255, 139, 72, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 86, 114, 1)), color-stop(100%, rgba(255, 139, 72, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 86, 114, 1) 0%, rgba(255, 139, 72, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 86, 114, 1) 0%, rgba(255, 139, 72, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 86, 114, 1) 0%, rgba(255, 139, 72, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 86, 114, 1) 0%, rgba(255, 139, 72, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5672', endColorstr='#ff8b48', GradientType=0)
 }
 #burger_gradient {
    background: #ff4665;
@@ -67,21 +113,4 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff4665', end
     background: -ms-linear-gradient(left, #009ec5 0%, #21e590 100%);
     background: linear-gradient(to right, #009ec5 0%, #21e590 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009ec5', endColorstr='#21e590', GradientType=1 );
-}
-.title{
-    position: absolute;
-    line-height: 77px;
-    color:white;
-    font-family: "Josefin Sans Bold";
-    font-size: 12px;
-}
-#desert_img {
-    transform: rotate(270deg);
-    z-index: -1;
-}
-#drinks_img {
-    z-index: -1;
-}
-#pizza_url {
-    cursor: pointer;
 }

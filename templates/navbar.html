@@ -1,38 +1,51 @@
 {% load static %}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <div class="container">
-    <div class="col-12">
-        <div class="row">
-            <div class="col-3 ml-auto align-self-center" id="pizza">
+    <div class="row">
+        <div class="col-3 ml-auto align-self-center" id="pizza">
+            <a href="/menu?category=pizzas" class="url">
                 <div class="row d-flex justify-content-center">
                     <div class="gradient" id="pizza_gradient"></div>
-                    <a href="pizzas.html">
-                    <img src="static/images/pizza.png " class="img" alt="Pizza">
-                    </a>
+                    <div class="image" id="pizza_img"></div>
                     <div class="title">Pizza</div>
                 </div>
-            </div>
-            <div class="col-3 ml-auto align-self-center" id="burger">
+            </a>
+        </div>
+
+
+
+        <div class="col-3 ml-auto align-self-center" id="burger">
+            <a href="/menu?category=burgers" class="url">
                 <div class="row d-flex justify-content-center">
                     <div class="gradient" id="burger_gradient"></div>
-                    <img src="static/images/burger.png " class="img" alt="Burger">
-                    <div class="title">Burger</div>
+                    <div class="image" id="burger_img"></div>
+                    <div class="title">Burgers</div>
                 </div>
-            </div>
-            <div class="col-3 ml-auto align-self-center" id="desert">
+            </a>
+        </div>
+
+        <div class="col-3 ml-auto align-self-center" id="deserts">
+            <a href="/menu?category=desserts" class="url">
                 <div class="row d-flex justify-content-center">
                     <div class="gradient" id="desert_gradient"></div>
-                    <img src="static/images/desert.png" class="img" id="desert_img" alt="Desert">
-                    <div class="title">Desert</div>
+                    <div class="image" id="desert_img"></div>
+                    <div class="title">Deserts</div>
                 </div>
-            </div>
-            <div class="col-3 ml-auto align-self-center" id="drinks">
+            </a>
+        </div>
+
+        <div class="col-3 ml-auto align-self-center" id="drinks">
+            <a href="/menu?category=drinks" class="url">
                 <div class="row d-flex justify-content-center">
                     <div class="gradient" id="drink_gradient"></div>
-                    <img src="static/images/drink.png" class="img" id="drinks_img" alt="Drinks">
+                    <div class="image" id="drink_img"></div>
                     <div class="title">Drinks</div>
                 </div>
-            </div>
+            </a>
         </div>
+
+
+
+
     </div>
 </div>

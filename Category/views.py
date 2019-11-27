@@ -18,3 +18,21 @@ def drink_view(request):
 
 def pizza_view(request):
     return render(request, "pizzas.html", {'pizzas': Pizza.objects.all()})
+
+def menu_view(request, *args, **kwargs):
+    category = request.GET.get('category', 'all')
+    if category == 'drinks':
+        obj = {'items': Drink.objects.all()}
+    elif category == 'pizzas':
+        obj = {'items': Pizza.objects.all()}
+    elif category == 'desserts':
+        obj = {'items': Dessert.objects.all()}
+    elif category == 'burgers':
+        obj = {'items': Burger.objects.all()}
+    else:
+        obj = {'items': Burger.objects.all() +
+                        Drink.objects.all() +
+                        Pizza.objects.all() +
+                        Dessert.objects.all()}
+
+    return render(request, "menu.html", obj)
