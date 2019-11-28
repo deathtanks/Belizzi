@@ -2,16 +2,41 @@
 {% load static %}
 {% block content %}
 {% for item in items %}
-<img class="block_main"  src = /media/{{ item.img }}  >
+<div class="container item">
+    <div class="col-12">
+            <div class="img">
+                <img class="block_main"  src = /media/{{ item.img }}  alt="img" >
+            </div>
+            <div class="row">
+                <div class="col-9">
+                    <div class="row">
+                        <div class="name">{{ item.name }}</div>
+                        <div id="category_border">
+                            <div class="category d-flex justify-content-center">{{ item.category }}</div>
+                        </div>
+                        <div id="preparing_time_border">
+                            <div class="preparing_time d-flex justify-content-center">{{item.preparing_time}}</div>
+                        </div>
+                    </div>
+                    <div class="components row d-flex justify-content-left">{{item.components}}</div>
+                    <div class="price row d-flex justify-content-left">${{item.price}}</div>
+                </div>
+                <div class="col-3 ml-auto align-self-center">
+                    <a href="#" class="url">
+                        <div class="row d-flex justify-content-center">
 
-    <ul class="under_block">
-        <li class="left"><h3>{{ item.name }}</h3>
-            <p>$ {{ item.price }} <span class="category-title">{{ item.category }}</span></p>
-        </li>
-        <li class="plus">
-            <a href="#">+</a>
-        </li>
-    </ul>
+                            <div class="plus_border d-flex justify-content-center">
+                                <div class="image" id="plus_img"></div>
+                            </div>
+
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endfor %}
 {% endblock %}
 
