@@ -1,5 +1,5 @@
 #homepage_img {
-    background-image: url("../footer/footer_img/home_img-1.png");
+    background-image: url("../footer/footer_img/home_img-2.png");
     background-size: cover;
     height: 12vw;
     width: 12vw;
@@ -8,25 +8,25 @@
 }
 
 #cart_img {
-    background-image: url("../footer/footer_img/shopping-cart.svg");
+    background-image: url("../footer/footer_img/plus.png");
     background-size: cover;
-    height: 13vw;
-    width: 13vw;
+    height: 10vw;
+    width: 10vw;
     position: absolute;
-    margin-top: 3.7vw;
-    margin-left: 3vw;
+    margin-top: 5vw;
+    margin-left: 4.9vw;
     z-index: 2;
 }
 
 #search_img {
-    background-image: url("../footer/footer_img/search-1.png");
+    background-image: url("../footer/footer_img/search.png");
     background-size: cover;
     height: 12vw;
     width: 12vw;
 }
 
 #cart_circle {
-    background:#6E7FAAD9;
+    background: #808AFB 0% 0% no-repeat padding-box;
     height: 20vw;
     width: 20vw;
     border-radius: 20vw;
@@ -38,7 +38,7 @@
 #line{
     height: 1px;
     width: 100%;
-    background-color: #6E7FAAD9;
+    background-color: #808AFB;
     z-index: -2;
     margin-bottom:-6vw;
 }

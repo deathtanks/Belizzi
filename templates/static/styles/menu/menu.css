@@ -15,10 +15,18 @@
     font-style: normal;
 }
 
+.empty_bottom_space {
+    padding-bottom: 25vw;
+}
+
+
+.plus {
+    margin-right:2vw ;
+}
 .name {
     text-align: left;
     font-family: "Josefin Sans Bold";
-    font-size: 6vw;
+    font-size: 5vw;
     color: #3E3F68;
 }
 .category {
@@ -35,6 +43,7 @@
     color: white;
 
 }
+
 .plus_border {
     height: 15vw;
     width: 15vw;
@@ -45,7 +54,7 @@
     margin-left: 6vw;
 }
 .components {
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-family: "Josefin Sans Regular";
     color: #6E7FAA;
 }
@@ -65,10 +74,10 @@
 
 
 #category_border {
-    margin-left: 6vw;
+    margin-left: 2vw;
     margin-top: 3vw;
     height:4vw ;
-    width:15vw ;
+    width:13vw ;
     background: transparent linear-gradient(270deg, #FF4665 0%, #832BF6 100%) 0% 0% no-repeat padding-box;
     box-shadow: 0px 10px 99px #0000000D;
     opacity: 0.65;
@@ -78,7 +87,7 @@
 
 }
 #preparing_time_border {
-    margin-left: 3vw;
+    margin-left: 2vw;
     border-radius: 2vw;
     margin-top: 3vw;
     height:4vw ;

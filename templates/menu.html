@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
+Table {{ table }}
 {% block content %}
 {% for item in items %}
 <div class="container item">
     <div class="col-12">
-            <div class="img">
-                <img class="block_main"  src = /media/{{ item.img }}  alt="img" >
+            <div class="img justify-content-center">
+                <img class="block_main" id="img" src = /media/{{ item.img }}  alt="img" >
             </div>
             <div class="row">
                 <div class="col-9">
                     <div class="row">
-                        <div class="name">{{ item.name }}</div>
+                        <div class="name d-flex justify-content-right">{{ item.name }}</div>
                         <div id="category_border">
                             <div class="category d-flex justify-content-center">{{ item.category }}</div>
                         </div>
@@ -21,7 +22,7 @@
                     <div class="components row d-flex justify-content-left">{{item.components}}</div>
                     <div class="price row d-flex justify-content-left">${{item.price}}</div>
                 </div>
-                <div class="col-3 ml-auto align-self-center">
+                <div class="col-3 ml-auto align-self-right">
                     <a href="#" class="url">
                         <div class="row d-flex justify-content-center">
 
@@ -38,5 +39,6 @@
     </div>
 </div>
 {% endfor %}
+<div class="empty_bottom_space"></div>
 {% endblock %}
 
