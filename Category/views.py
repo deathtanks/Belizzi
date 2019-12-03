@@ -7,7 +7,6 @@ from .models import Burger, Dessert, Drink, Pizza
 def burger_view(request):
     return render(request, "burgers.html", {'burgers': Burger.objects.all()})
 
-
 def dessert_view(request):
     return render(request, "desserts.html", {'desserts': Dessert.objects.all()})
 
@@ -36,3 +35,4 @@ def menu_view(request, *args, **kwargs):
                         Dessert.objects.all()}
 
     return render(request, "menu.html", obj)
+
