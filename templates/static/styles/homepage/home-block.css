@@ -1,8 +1,5 @@
 .block_main{
-    margin-left:2%;
-    margin-right:2%;
-    margin-top: 10%;
-    width:96%;
+    width: 100%;
     border-radius: 15px;
 }
 .block_main figcaption{
