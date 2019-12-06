@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
 from pages.views import homepage
 from Category.views import  menu_view
+
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -26,6 +28,8 @@ urlpatterns = [
     path('home/', homepage, name='home'),
     path('admin/', admin.site.urls),
     path('menu/', menu_view, name='menu'),
+    path('bucket/', bucket_list, name='bucket'),
+
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

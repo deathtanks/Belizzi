@@ -1,0 +1,35 @@
+#left_arrow_img {
+    background-image: url("../bucket/bucket_img/left-arrow.png");
+      height: 5vw;
+    width: 5vw;
+    background-size: cover;
+    float: left;
+}
+
+#close_img {
+    background-image: url("../bucket/bucket_img/close.png");
+      height: 5vw;
+    width: 5vw;
+    background-size: cover;
+    float: right;
+}
+
+#category_title {
+    display: inline-block;
+    margin-left: 10%;
+    height: 6vw;
+    font-size: 6vw;
+    font-family: "Josefin Sans", serif;
+}
+
+#default {
+    font-family: "Josefin Sans", serif;
+}
+
+#place_for_order {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
