@@ -1,8 +1,21 @@
 from django.db import models
-
+from itertools import chain
 
 # Create your models here.
 
+def get_product(name):
+    if name == "Pizza":
+        return Pizza
+    elif name == "Burger":
+        return Burger
+    elif name == "Dessert":
+        return Dessert
+    elif name == "Drink":
+        return Drink
+
+
+def get_all_product():
+    return [Pizza, Burger, Drink, Dessert]
 
 class Pizza(models.Model):
     name = models.CharField(default='tested pizza', max_length=100)

@@ -30,10 +30,13 @@ Table {{ table }}
                         <div class="row d-flex justify-content-center">
 
                             <div class="plus_border d-flex justify-content-center">
-                                <div class="image" id="plus_img"></div>
+                                <form action="{% url "cart:cart_add" item.category item.id %}" method="post">
+                                    {% csrf_token %}
+                                    {{ cart_product_form }}
+                                    <input type="hidden" id="quantity" name="quantity" value="1">
+                                    <input type="image" src="/static/styles/menu/menu_img/plus_white.png" id="plus_img">
+                                </form>
                             </div>
-
-
                         </div>
                     </a>
                 </div>
