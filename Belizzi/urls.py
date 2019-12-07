@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pages.views import homepage, bucket_list
+from pages.views import homepage
 from Category.views import burger_view, dessert_view, drink_view, pizza_view, menu_view
 
 from django.conf import settings
@@ -29,8 +29,7 @@ urlpatterns = [
     path('drink/', drink_view, name='drink'),
     path('pizza/', pizza_view, name='pizza'),
     path('admin/', admin.site.urls),
-    path('menu/', menu_view, name='menu'),
-    path('bucket/', bucket_list, name='bucket'),
+    path('menu/', menu_view, name='menu')
 
 
 
