@@ -76,9 +76,9 @@
 
 }
 #category_border {
-    background: transparent linear-gradient(270deg, #FF4665 0%, #832BF6 100%) 0% 0% no-repeat padding-box;
-    box-shadow: 0px 10px 99px #0000000D;
-    opacity: 0.65;
+    background: transparent linear-gradient(270deg, #F3C980 0%, #832BF6 100%) 0% 0% no-repeat padding-box;
+box-shadow: 0px 10px 99px #0000000D;
+opacity: 0.65;
 }
 #preparing_time_border {
     background-color: #848DFF;
