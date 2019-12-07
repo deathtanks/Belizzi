@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from itertools import chain
 from .models import Burger, Dessert, Drink, Pizza
 
 
@@ -18,6 +19,7 @@ def drink_view(request):
 def pizza_view(request):
     return render(request, "pizzas.html", {'pizzas': Pizza.objects.all()})
 
+
 def menu_view(request, *args, **kwargs):
     category = request.GET.get('category', 'all')
     if category == 'drinks':
@@ -28,11 +30,11 @@ def menu_view(request, *args, **kwargs):
         obj = {'items': Dessert.objects.all()}
     elif category == 'burgers':
         obj = {'items': Burger.objects.all()}
+
     else:
-        obj = {'items': Burger.objects.all() +
-                        Drink.objects.all() +
-                        Pizza.objects.all() +
-                        Dessert.objects.all()}
+        obj = {'items': chain(Pizza.objects.all(),
+                              Burger.objects.all(),
+                              Drink.objects.all(),
+                              Dessert.objects.all())}
 
     return render(request, "menu.html", obj)
-

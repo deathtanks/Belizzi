@@ -14,9 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from pages.views import homepage
-from Category.views import burger_view, dessert_view, drink_view, pizza_view, menu_view
+from Category.views import  menu_view
 
 from django.conf import settings
 from django.conf.urls.static import static
@@ -24,13 +24,9 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('', homepage, name='home'),
     path('home/', homepage, name='home'),
-    path('burger/', burger_view, name='burger'),
-    path('dessert/', dessert_view, name='dessert'),
-    path('drink/', drink_view, name='drink'),
-    path('pizza/', pizza_view, name='pizza'),
     path('admin/', admin.site.urls),
-    path('menu/', menu_view, name='menu')
-
+    path('cart', include('cart.urls')),
+    path('menu/', menu_view, name='menu'),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

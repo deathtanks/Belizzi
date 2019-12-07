@@ -1,17 +1,51 @@
 {% extends 'base.html' %}
 {% load static %}
+Table {{ table }}
 {% block content %}
-{% for item in items %}
-<img class="block_main"  src = /media/{{ item.img }}  >
 
-    <ul class="under_block">
-        <li class="left"><h3>{{ item.name }}</h3>
-            <p>$ {{ item.price }} <span class="category-title">{{ item.category }}</span></p>
-        </li>
-        <li class="plus">
-            <a href="#">+</a>
-        </li>
-    </ul>
+{% for item in items %}
+<div class="container item">
+    <div class="col-12">
+            <div class="img justify-content-center">
+                <img class="block_main" id="img" src = /media/{{ item.img }}  alt="img" >
+            </div>
+            <div class="row">
+                <div class="col-9 zyz">
+                    <div class="row">
+                        <div class="name d-flex justify-content-right">{{ item.name }}</div>
+                    </div>
+                    <div class="row">
+                        <div class="border" id="category_border">
+                            <div class="item_title d-flex justify-content-center" id="item_category_title">{{ item.category }}</div>
+                        </div>
+                        <div class="border" id="preparing_time_border">
+                            <div class="item_title d-flex justify-content-center" id="item_preparing_time_title">{{item.preparing_time}}</div>
+                        </div>
+                    </div>
+                    <div class="components row d-flex justify-content-left">{{item.components}}</div>
+                    <div class="price row d-flex justify-content-left">${{item.price}}</div>
+                </div>
+                <div class="col-3 ml-auto align-self-right">
+                    <a href="#" class="url">
+                        <div class="row d-flex justify-content-center">
+
+                            <div class="plus_border d-flex justify-content-center">
+                                <form action="{% url "cart:cart_add" item.category item.id %}" method="post">
+                                    {% csrf_token %}
+                                    {{ cart_product_form }}
+                                    <input type="hidden" id="quantity" name="quantity" value="1">
+                                    <input type="image" src="/static/styles/menu/menu_img/plus_white.png" id="plus_img">
+                                </form>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endfor %}
+
+<div class="empty_bottom_space"></div>
 {% endblock %}
 

@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Josefin Sans Bold';
+    src: url('../fonts/JosefinSans-Bold.ttf');
+    src: url('../fonts/JosefinSans-Bold.ttf?iefix') format('truetype'),
+    url('../fonts/JosefinSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Josefin Sans Regular";
+    src: url("../fonts/JosefinSans-Regular.ttf");
+    src: url("../fonts/JosefinSans-Regular.ttf?iefix") format('truetype'),
+    url("../fonts/JosefinSans-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.empty_bottom_space {
+    padding-bottom: 25vw;
+}
+.plus {
+    margin-right:2vw ;
+}
+.name {
+    text-align: left;
+    font-family: "Josefin Sans Bold";
+    font-size: 8vw;
+    color: #3E3F68;
+}
+.plus_border {
+    height: 15vw;
+    width: 15vw;
+    border-radius: 10vw;
+    background: transparent linear-gradient(180deg, #5663FFB3 0%, #9098DFB3 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #5663FF85;
+    margin-left: 6vw;
+}
+.components {
+    font-size: 3.5vw;
+    font-family: "Josefin Sans Regular";
+    color: #6E7FAA;
+}
+.price {
+    margin-left: 5vw;
+    font-size: 5vw;
+    color: #6E7FAA;
+}
+.item{
+    padding: 20px 10px;
+    border-radius: 25px;
+    background: white;
+    margin-bottom: 5vw;
+}
+.border {
+    height: 6vw;
+    width: 22vw;
+    border-radius: 4vw;
+    margin-top: -1vw;
+    margin-bottom: 1.5vw;
+}
+.item_title {
+    font-family: "Josefin Sans Regular";
+    font-size: 4.2vw;
+    color: white;
+}
+#space_for_items{
+    background: #f8f8f8;
+    padding: 20px 0px;
+}
+#plus_img {
+    width: 8vw;
+    height: 8vw;
+    background-image: url("../menu/menu_img/plus_white.png");
+    z-index: 2;
+    margin-top: 3.7vw;
+
+}
+#category_border {
+    background: transparent linear-gradient(270deg, #FF4665 0%, #832BF6 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 10px 99px #0000000D;
+    opacity: 0.65;
+}
+#preparing_time_border {
+    background-color: #848DFF;
+    margin-left: 3vw;
+}
