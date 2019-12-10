@@ -26,6 +26,7 @@ urlpatterns = [
     path('home/', homepage, name='home'),
     path('admin/', admin.site.urls),
     path('cart', include('cart.urls')),
+    path('orders/', include('orders.urls')),
     path('menu/', menu_view, name='menu'),
 
 
