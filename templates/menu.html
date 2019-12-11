@@ -10,7 +10,7 @@ Table {{ table }}
                 <img class="block_main" id="img" src = /media/{{ item.img }}  alt="img" >
             </div>
             <div class="row">
-                <div class="col-9 zyz">
+                <div class="col-9">
                     <div class="row">
                         <div class="name d-flex justify-content-right">{{ item.name }}</div>
                     </div>
@@ -30,7 +30,7 @@ Table {{ table }}
                         <div class="row d-flex justify-content-center">
 
                             <div class="plus_border d-flex justify-content-center">
-                                <form action="{% url "cart:cart_add" item.category item.id %}" method="post">
+                                <form action="{% url 'cart:cart_add' item.category item.id %}" method="post">
                                     {% csrf_token %}
                                     {{ cart_product_form }}
                                     <input type="hidden" id="quantity" name="quantity" value="1">
