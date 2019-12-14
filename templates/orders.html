@@ -1,0 +1,38 @@
+{% load static %}
+{% load staticfiles %}
+<html lang="en">
+{% block title %}
+    <head>
+    <link rel="stylesheet" href="{% static 'styles/orders/orders.css' %}">
+    <title>Orders</title>
+    </head>
+    <body>
+    <div class="components-title row d-flex justify-content-left">Orders:</div>
+{% endblock %}
+
+{% block content %}
+            {% for order in orders %}
+                <div class="container">
+                <div class="jumbotron">
+                <ul class="list-group">
+                    <div class="number-title row d-flex justify-content-left"><strong>№ {{ order.id }}:</strong></div>
+                        <div class="items">
+                <div class="components row d-flex justify-content-left">
+                    Table №: {{ order.table }}
+                <ul class="list-group">
+                    {% for item in order.items %}
+                        <li class="list-group-item">
+                        {{ item.quantity }}x {{ item.product.name }} ({{ item.product.category }})
+                        </li>
+                    {% endfor %}
+                </ul>
+                </div>
+                </div>
+                </ul>
+                </div>
+                </div>
+                <br />
+            {% endfor %}
+{% endblock %}
+</body>
+</html>

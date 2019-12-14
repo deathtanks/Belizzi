@@ -2,15 +2,6 @@ from decimal import Decimal
 from django.conf import settings
 from Category.models import *
 
-def get_prod_id(prod):
-    return prod.category + "_" + str(prod.id)
-
-def get_cat_from_prod_id(prod_id):
-    return prod_id.split('_')[0]
-
-def get_id_from_prod_id(prod_id):
-    return prod_id.split('_')[1]
-
 class Cart(object):
 
     def __init__(self, request):
@@ -21,12 +12,13 @@ class Cart(object):
         self.cart = cart
 
     def add(self, product, quantity=1, update_quantity=False):
-        if get_prod_id(product) not in self.cart:
-            self.cart[get_prod_id(product)] = {'quantity': 0, 'price': str(product.price)}
+        product_id = str(product.id)
+        if product_id not in self.cart:
+            self.cart[product_id] = {'quantity': 0, 'price': str(product.price)}
         if update_quantity:
-            self.cart[get_prod_id(product)]['quantity'] = quantity
+            self.cart[product_id]['quantity'] = quantity
         else:
-            self.cart[get_prod_id(product)]['quantity'] += quantity
+            self.cart[product_id]['quantity'] += quantity
         self.save()
 
     def save(self):
@@ -34,19 +26,16 @@ class Cart(object):
         self.session.modified = True
 
     def remove(self, product):
-        if get_prod_id(product) in self.cart:
-            del self.cart[get_prod_id(product)]
+        product_id = str(product.id)
+        if product_id in self.cart:
+            del self.cart[product_id]
             self.save()
 
     def __iter__(self):
         product_ids = self.cart.keys()
-        #pdb.set_trace()
-
-        for id in product_ids:
-            manager = get_product(get_cat_from_prod_id(id))
-            products = manager.objects.filter(id__in=get_id_from_prod_id(id))
-            for product in products:
-                self.cart[get_prod_id(product)]['product'] = product
+        products = Product.objects.filter(id__in=product_ids)
+        for product in products:
+            self.cart[str(product.id)]['product'] = product
 
         for item in self.cart.values():
             item['price'] = Decimal(item['price'])

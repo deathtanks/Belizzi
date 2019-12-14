@@ -1,0 +1,33 @@
+.jumbotron {
+    background-color: #b8daff;
+    margin-left: 5vw;
+}
+
+#order-style{
+    font-family: "Josefin Sans Regular";
+    font-size: 4.2vw;
+    background-color: #FEFF9A;
+    color: white;
+}
+
+.components {
+    font-size: 5vw;
+    font-family: "Josefin Sans Regular";
+    color: #3E3F68;
+}
+
+.components-title {
+    font-size: 8vw;
+    font-family: "Josefin Sans Bold";
+    color: #3E3F68;
+}
+
+.number-title {
+    font-size: 5vw;
+    font-family: "Josefin Sans Bold";
+    color: #3E3F68;
+}
+
+.items {
+    margin-left: 5vw;
+}
